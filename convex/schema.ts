@@ -58,7 +58,14 @@ export default defineSchema({
   })
     .index("by_source_sourceId", ["source", "sourceId"]) // dedupe/upsert on scrape
     .index("by_status", ["status"]) // pull "new" jobs for matching
-    .index("by_postedAt", ["postedAt"]), // staleness cleanup
+    .index("by_postedAt", ["postedAt"])
+    .index("by_source_and_postedAt", ["source", "postedAt"])
+    .index("by_location_and_postedAt", ["location", "postedAt"])
+    .index("by_source_and_location_and_postedAt", [
+      "source",
+      "location",
+      "postedAt",
+    ]),
 
   matches: defineTable({
     jobId: v.id("jobs"),

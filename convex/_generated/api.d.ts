@@ -9,7 +9,7 @@
  */
 
 import type * as jobs from "../jobs.js";
-import type * as myFunctions from "../myFunctions.js";
+import type * as scrapeJobs from "../scrapeJobs.js";
 
 import type {
   ApiFromModules,
@@ -19,7 +19,7 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   jobs: typeof jobs;
-  myFunctions: typeof myFunctions;
+  scrapeJobs: typeof scrapeJobs;
 }>;
 
 /**

@@ -10,6 +10,12 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.site-publish/
+.claude/
+.openai/
+CLAUDE.md
+claude.md
+.cursor/
 *.local
 
 # Editor directories and files
